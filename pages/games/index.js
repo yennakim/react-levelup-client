@@ -14,12 +14,14 @@ function Home() {
 
   return (
     <article className="games">
-      <Button onClick={() => {
-        router.push('/games/new');
-      }}
-      >
-        Register New Game
-      </Button>
+      <div className="text-center my-4">
+        <Button onClick={() => {
+          router.push('/games/new');
+        }}
+        >
+          Register New Game
+        </Button>
+      </div>
       <h1>Games</h1>
       {games.map((game) => (
         <section key={`game--${game.id}`} className="game">
